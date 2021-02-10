@@ -5,7 +5,7 @@ import './pokeStyle.css'
 const PokeContainer = (props) => {
     const pokemons = props.pokeArray;
     const pokeList = pokemons.map((value) => {
-        return <PokemonItem pokeName={value.pokemon.name} pokeType="Electric" pokeImg={value.pokemon.url} key={value.pokemon.name}/>
+        return <PokemonItem pokeName={value.pokemon.name} pokeType="" pokeImg={value.pokemon.url} key={value.pokemon.name}/>
     });
 
     //pokeName={} pokeType={} pokeImg={}
