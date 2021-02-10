@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import axios from "axios";
+import "./App.css";
+
 export default function App() {
   const [dataPokemon, setDataPokemon] = useState({
     arrayPokemon: [],
@@ -58,9 +61,11 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Pokemon App</h1>
-      {loading && <p>loading...</p>}
-      {!loading && <p>Componente De Busqueda</p>}
+      <div className="App-header">
+        <h1>Pokemon App</h1>
+        {loading && <Spinner animation="border" role="status" />}
+        {!loading && <p>Componente De Busqueda</p>}
+      </div>
     </div>
   );
 }
