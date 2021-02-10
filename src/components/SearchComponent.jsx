@@ -9,7 +9,7 @@ const SearchComponent = ( { searchTerm, searchHandler, buttonHandler } ) => {
 		<div>
 			<form>
 				<SearchBox searchTerm={ searchTerm } searchHandler={ searchHandler } />
-				<SearchButton handlerButton={ buttonHandler } />
+				<SearchButton buttonHandler={ buttonHandler } />
 			</form>
 		</div>
 	)
