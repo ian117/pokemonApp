@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import PokeContainer from "./components/PokemonContainer"
+
 export default function App() {
   const [dataPokemon, setDataPokemon] = useState({
     arrayPokemon: [],
@@ -35,7 +37,7 @@ export default function App() {
           const url = pokemonType.url;
           const res = await axios.get(url);
           setDataPokemon({
-            arrayPokemon: res.data.pokemon,
+            arrayPokemon: res.data.pokemon.splice(0,10),
             error: false,
             messageError: "",
           });
@@ -61,6 +63,9 @@ export default function App() {
       <h1>Pokemon App</h1>
       {loading && <p>loading...</p>}
       {!loading && <p>Componente De Busqueda</p>}
+      {dataPokemon.arrayPokemon.length > 0 &&
+        <PokeContainer pokeArray={dataPokemon.arrayPokemon}/>
+      }
     </div>
   );
 }
