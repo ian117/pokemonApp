@@ -38,7 +38,7 @@ export default function App() {
           const url = pokemonType.url;
           const res = await axios.get(url);
           setDataPokemon({
-            arrayPokemon: res.data.pokemon,
+            arrayPokemon: res.data.pokemon.splice(0,10),
             error: false,
             messageError: "",
           });

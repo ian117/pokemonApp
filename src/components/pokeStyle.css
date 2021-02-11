@@ -1,0 +1,19 @@
+.pokeContainer {
+    width: 80%;
+    height: 75vh;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokeCard {
+    box-sizing: border-box;
+    border: 2px solid black;
+    width: 33.333%;
+    min-height: 50%;
+}
