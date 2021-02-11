@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SearchComponent from './components/SearchComponent'
 
 export default function App() {
   const [search, setSearch] = useState("");
@@ -16,11 +17,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <input onChange={handleSearch} value={search} />
-      <button type="button" onClick={doSearch}>
-        search
-      </button>
-      <div>{type}</div>
+    <SearchComponent searchTerm={search} searchHandler={handleSearch} buttonHandler={doSearch}/>
+    <div>{type}</div>
     </div>
   );
 }
