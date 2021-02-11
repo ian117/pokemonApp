@@ -3,13 +3,13 @@ import React from 'react';
 import SearchBox from './SearchBox';
 import SearchButton from './SearchButton';
 
-const SearchComponent = ( { searchTerm, searchHandler, buttonHandler } ) => {
+const SearchComponent = ( { searchTerm, searchHandler } ) => {
 
 	return (
 		<div>
 			<form>
 				<SearchBox searchTerm={ searchTerm } searchHandler={ searchHandler } />
-				<SearchButton buttonHandler={ buttonHandler } />
+				{/* <SearchButton buttonHandler={ buttonHandler } /> */}
 			</form>
 		</div>
 	)
