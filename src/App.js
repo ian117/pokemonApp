@@ -12,15 +12,11 @@ import GetPokemonTypeStandalone from './components/utils/GetPokemonTypeStandalon
 export default function App() {
 	const [dataPokemon, setDataPokemon] = useState( new Array() );
 	const [pokemonTypes, setPokemonTypes] = useState( new Array() );
-	
+
 	const [actualType, setActualType] = useState('fire');
 	const [isLoading, setLoading] = useState( false );
 
 	const [buttonStatus, setButtonStatus] = useState( false );
-
-	const buttonStatusHandler = () => {
-		setButtonStatus( !buttonStatus );
-	}
 
 	useEffect(() => {
 		setLoading( false );
@@ -54,7 +50,7 @@ export default function App() {
 			<div className="App-header">
 				<h1>Pokemon App</h1>
 				<SearchComponent searchTerm={ actualType } searchHandler={ setActualType } />
-				<button onClick={ () => buttonStatusHandler() }> Search </button>
+				<button onClick={ () => setButtonStatus( ( prevStatus ) => !prevStatus ) }> Search </button>
 				{ ( isLoading ) ?
 					<Spinner animation="grow" role="status" />
 					:
