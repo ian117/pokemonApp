@@ -1,17 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import SearchBox from './SearchBox';
-import SearchButton from './SearchButton';
 
 const SearchComponent = ( { searchTerm, searchHandler } ) => {
 
 	return (
-		<div>
-			<form>
+		<Fragment>
 				<SearchBox searchTerm={ searchTerm } searchHandler={ searchHandler } />
-				{/* <SearchButton buttonHandler={ buttonHandler } /> */}
-			</form>
-		</div>
+		</Fragment>
 	)
 }
 
