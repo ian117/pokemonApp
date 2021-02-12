@@ -43,7 +43,7 @@ export default function App() {
 		}
 
 		setLoading( false );
-	}, [ !buttonStatus ]);
+	}, [ buttonStatus ]);
 
 	return (
 		<div className="App">
